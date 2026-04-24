@@ -2,39 +2,39 @@ import { useState } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 
 // 🔹 Categories
-const categories = ["All", "Web", "Fullstack", "AI"];
+const categories = ["All", "Web", "Fullstack", "AI", "Frontend", "Backend"];
 
 // 🔹 Projects Data
 const projects = [
     {
-        title: "Fintech Dashboard",
-        category: "Web",
+        title: "Personal Portfolio",
+        category: "Frontend",
         description:
-            "A comprehensive financial analytics platform with real-time data visualization.",
+            "A responsive personal portfolio showcasing projects, skills, and experience with a clean, modern UI.",
         image: "/projects/project1.png",
-        tags: ["React", "Typescript", "NodeJS"],
-        link: "#",
-        github: "#",
+        tags: ["React", "Javascript", "TailwindCSS"],
+        link: "https://prabhanshtiwari-in.vercel.app/",
+        github: "https://github.com/prabhanshtiwari/prabhanshtiwari.in",
     },
     {
-        title: "E-Commerce Platform",
-        category: "Fullstack",
+        title: "Background Changer",
+        category: "Frontend",
         description:
-            "A full-featured e-commerce solution with payments and analytics.",
+            "A React app that dynamically changes the background color using state-driven UI.",
         image: "/projects/project2.png",
-        tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-        link: "#",
-        github: "#",
+        tags: ["React", "JavaScript", "UI"],
+        link: "https://bg-changer-five-rouge.vercel.app/",
+        github: "https://github.com/prabhanshtiwari/bgChanger",
     },
     {
-        title: "AI Writing Assistant",
-        category: "AI",
+        title: "Password Generator",
+        category: "Frontend",
         description:
-            "An intelligent writing tool powered by GPT models.",
+            "A React-based password generator that creates secure, customizable passwords with instant copy functionality.",
         image: "/projects/project3.png",
-        tags: ["React", "OpenAI", "Python", "FastAPI"],
-        link: "#",
-        github: "#",
+        tags: ["React", "Javascript"],
+        link: "https://password-generator-eight-hazel-66.vercel.app/",
+        github: "https://github.com/prabhanshtiwari/password-generator",
     },
     {
         title: "Project Management Tool",
