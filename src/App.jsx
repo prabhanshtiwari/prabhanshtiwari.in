@@ -10,7 +10,7 @@ import { Experience } from "@/sections/Experience";
 import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
 
-import { AllProjects } from "./components/AllProjects";
+
 
 // Home page (full landing)
 function Home() {
@@ -40,7 +40,6 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/allprojects" element={<AllProjects />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
