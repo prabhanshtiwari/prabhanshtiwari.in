@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navLinks = [
   { path: "/about", label: "About" },
@@ -43,20 +43,29 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => (
-              <Link
+              <NavLink
                 key={index}
                 to={link.path}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                className={({ isActive, isPending }) =>
+                  `px-4 py-2 text-sm rounded-full transition ${isActive
+                    ? "bg-primary text-white"
+                    : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                  } ${isPending ? "opacity-50" : ""}`
+                }
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
           </div>
         </div>
 
-        {/* CTA Button (Resume) */}
+        {/* CTA Button */}
         <div className="hidden md:block">
-          <a href="/Prabhansh_Tiwari_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href="/Prabhansh_Tiwari_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="sm">Resume</Button>
           </a>
         </div>
@@ -76,14 +85,19 @@ export const Navbar = () => {
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
 
             {navLinks.map((link, index) => (
-              <Link
+              <NavLink
                 key={index}
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                className={({ isActive }) =>
+                  `text-lg py-2 transition ${isActive
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                  }`
+                }
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
 
             <a

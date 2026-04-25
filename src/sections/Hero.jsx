@@ -85,9 +85,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Prabhansh Tiwari — a frontend-focused developer building responsive and interactive web applications using React, JavaScript, and TailwindCSS.
               </p>
             </div>
 
@@ -106,9 +104,9 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "http://github.com/prabhanshtiwari" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/prabhanshtiwari/" },
+                { icon: Twitter, href: "https://x.com/prabhanshdev" },
               ].map((social, idx) => (
                 <a
                   key={idx}
